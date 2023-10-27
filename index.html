@@ -20,6 +20,26 @@
         <h2>Change Content</h2>
         <p id="content">Click the button to change this content.</p>
         <button id="changeButton">Change Content</button>
+
+        <!--Input savings amount and goal amount-->
+        <p>Current Savings: $<span id="savings-amount"></span></p>
+        <br />
+        <p>Total Goal: $<span id="goal-amount"></span></p>
+        <br />
+
+        <input type="number" id="goal-input" placeholder="Enter goal amount" />
+        <button onclick="updateGoal()">Update Goal</button>
+
+        <!--Add or subtract money-->
+        <input type="number" id="add-money" placeholder="Enter amount to add" />
+        <button onclick="addMoney()">Add Money</button>
+
+        <input
+          type="number"
+          id="withdraw-money"
+          placeholder="Enter amount to withdraw"
+        />
+        <button onclick="withdrawMoney()">Withdraw Money</button>
       </section>
     </main>
 
