@@ -4,47 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Piggy Bank Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Welcome to My Website</h1>
+      <h1 class="header-title">Welcome to My Piggy Bank</h1>
     </header>
 
     <main>
       <section>
         <h2>About Us</h2>
-        <p>This is a simple website template.</p>
+        <p>This is your financial playground.</p>
       </section>
 
-      <section>
-        <h2>Change Content</h2>
-        <p id="content">Click the button to change this content.</p>
+      <section class="content-section">
+        <h2>Manage Your Savings</h2>
+        <p id="content">Track your savings and set goals.</p>
         <button id="changeButton">Change Content</button>
 
-        <!--Input savings amount and goal amount-->
-        <p>Current Savings: $<span id="savings-amount"></span></p>
-        <br />
-        <p>Total Goal: $<span id="goal-amount"></span></p>
-        <br />
+        <div class="savings-info">
+          <div class="savings-label">Current Savings:</div>
+          <div class="savings-amount">
+            $<span id="savings-amount">0.00</span>
+          </div>
+        </div>
 
-        <input type="number" id="goal-input" placeholder="Enter goal amount" />
-        <button onclick="updateGoal()">Update Goal</button>
+        <div class="goal-info">
+          <div class="goal-label">Total Goal:</div>
+          <div class="goal-amount">$<span id="goal-amount">0.00</span></div>
+        </div>
 
-        <!--Add or subtract money-->
-        <input type="number" id="add-money" placeholder="Enter amount to add" />
-        <button onclick="addMoney()">Add Money</button>
+        <div class="goal-input">
+          <input
+            type="number"
+            id="goal-input"
+            placeholder="Enter goal amount"
+          />
+          <button onclick="updateGoal()">Update Goal</button>
+        </div>
 
-        <input
-          type="number"
-          id="withdraw-money"
-          placeholder="Enter amount to withdraw"
-        />
-        <button onclick="withdrawMoney()">Withdraw Money</button>
+        <div class="money-operations">
+          <div class="add-money-input">
+            <input
+              type="number"
+              id="add-money"
+              placeholder="Enter amount to add"
+            />
+            <button onclick="addMoney()">Add Money</button>
+          </div>
+
+          <div class="withdraw-money-input">
+            <input
+              type="number"
+              id="withdraw-money"
+              placeholder="Enter amount to withdraw"
+            />
+            <button onclick="withdrawMoney()">Withdraw Money</button>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2023 Your Website</p>
+      <p>&copy; 2023 Piggy Bank Website</p>
     </footer>
 
     <script src="script.js"></script>
