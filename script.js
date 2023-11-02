@@ -6,6 +6,17 @@ function changeContent() {
   contentParagraph.textContent = "The content has been changed!";
 }
 
+// Get references to the HTML elements
+const goalInput = document.getElementById("goal-input");
+const savingsGoalText = document.getElementById("savings-goal-text");
+
+// Define a function to update the savings goal
+function updateSavingsGoal() {
+  const newGoal = goalInput.value;
+  savingsGoalText.textContent = newGoal;
+  goalInput.value = ""; // Clear the input field
+}
+
 // Update Goal
 function updateGoal() {
   const goalAmount = parseFloat(document.getElementById("goal-input").value);
