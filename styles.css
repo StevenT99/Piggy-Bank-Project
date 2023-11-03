@@ -32,11 +32,17 @@ section {
   border-radius: 5px;
 }
 
-.savings-info,
+.savings-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
 .goal-info {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
+  border-bottom: 1px solid #333;
 }
 
 .savings-label,
@@ -52,14 +58,14 @@ section {
 }
 
 input[type="number"] {
-  padding: 5px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
 button {
   padding: 5px 10px;
-  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -75,4 +81,7 @@ footer {
   margin-top: 20px;
   font-size: 14px;
   color: #555;
+}
+.right-aligned {
+  float: right;
 }

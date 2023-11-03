@@ -19,7 +19,9 @@ function updateSavingsGoal() {
 
 // Update Goal
 function updateGoal() {
-  const goalAmount = parseFloat(document.getElementById("goal-input").value);
+  const goalAmount = parseFloat(
+    document.getElementById("add-goal-amount").value
+  );
   document.getElementById("goal-amount").textContent = goalAmount.toFixed(2); // Display with two decimal places
 }
 

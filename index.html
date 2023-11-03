@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Piggy Bank Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" href="piggybankpic.jpg" type="image/x-icon" />
+    <link rel="icon" href="piggybankpic.jpg" type="image/png" />
   </head>
-  <body>
+  <body style="background-color: #73a580">
     <header>
       <h1 class="header-title">Welcome to My Piggy Bank</h1>
     </header>
 
     <main>
+      <img
+        src="piggybankpic.jpg"
+        height="100px"
+        width="100px"
+        class="right-aligned"
+      />
       <section>
         <h2>About Us</h2>
-        <p>This is your financial playground.</p>
+        <p>This is your financial playground. What do you want to save for?</p>
       </section>
 
       <section class="content-section">
@@ -25,29 +33,53 @@
             id="goal-input"
             placeholder="Enter your savings goal"
           />
-          <button onclick="updateSavingsGoal()">Save</button>
+          <button
+            style="background-color: #fcb9a6"
+            onclick="updateSavingsGoal()"
+          >
+            Save
+          </button>
         </div>
 
-        <div class="savings-info">
+        <div
+          class="goal-info"
+          style="background-color: #fecdbf; border-radius: 10px; padding: 10px"
+        >
+          <div class="goal-label">Total Goal:</div>
+          <div class="goal-amount">$<span id="goal-amount">0.00</span></div>
+        </div>
+
+        <div
+          class="savings-info"
+          style="background-color: #9bdaac; border-radius: 10px; padding: 10px"
+        >
           <div class="savings-label">Current Savings:</div>
           <div class="savings-amount">
             $<span id="savings-amount">0.00</span>
           </div>
         </div>
 
-        <div class="goal-info">
-          <div class="goal-label">Total Goal:</div>
-          <div class="goal-amount">$<span id="goal-amount">0.00</span></div>
-        </div>
-
         <div class="money-operations">
+          <div class="add-money-input">
+            <input
+              type="number"
+              id="add-goal-amount"
+              placeholder="Enter goal amount"
+            />
+            <button style="background-color: #fcb9a6" onclick="updateGoal()">
+              Update Goal Amount
+            </button>
+          </div>
+
           <div class="add-money-input">
             <input
               type="number"
               id="add-money"
               placeholder="Enter amount to add"
             />
-            <button onclick="addMoney()">Add Money</button>
+            <button style="background-color: #73a580" onclick="addMoney()">
+              Add Money
+            </button>
           </div>
 
           <div class="withdraw-money-input">
@@ -56,7 +88,12 @@
               id="withdraw-money"
               placeholder="Enter amount to withdraw"
             />
-            <button onclick="withdrawMoney()">Withdraw Money</button>
+            <button
+              style="background-color: rgb(170, 31, 31)"
+              onclick="withdrawMoney()"
+            >
+              Withdraw Money
+            </button>
           </div>
         </div>
       </section>
